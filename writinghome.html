@@ -1,0 +1,69 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="writing.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+<audio id="background-audio" autoplay loop muted>
+		<source src="carefree.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+</audio>
+<button id="unmuteButton" onclick="toggleMute()">Play Music</button>
+
+ <div class="navbar-container">
+	<header>
+		<h1>Writing Projects</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="art.html">Art</a></li>
+					<li><a href="commission.html">Commissions</a></li>
+					<li class="active"><a href="writinghome.html">Writing</a></li>
+				</ul>
+			</nav>
+	</header>
+</div>
+
+<main>
+	<section class="writing-piece">
+        <h2>The Sky's The Limit</h2>
+        <h3>I have been working on this book for a few years. I have not made much progress but am still going to share.</h3>
+		<div class="cta-links">
+			<a href="story1.html" class="cta-link">TSTL</a>
+		</div>
+    </section>
+
+    <section class="writing-piece">
+        <h2>Really? It wasn't even me!</h2>
+        <h3>This is a short story I wrote a year ago for my english class!</h3>
+		<div class="cta-links">
+			<a href="story2.html" class="cta-link">RIWEM</a>
+		</div>
+    </section>
+</main>
+	
+<footer>
+	<p>&copy; 2025 Saturnalia Nelson. All rights reserved.</p>
+</footer>
+
+</body>
+<script>
+    var audio = document.getElementById('background-audio');
+    var unmuteButton = document.getElementById('unmuteButton');
+
+    function toggleMute() {
+        if (audio.muted) {
+            audio.muted = false;
+            unmuteButton.textContent = 'Pause Music';
+        } else {
+            audio.muted = true;
+            unmuteButton.textContent = 'Play Music';
+        }
+    }
+</script>
+</html>

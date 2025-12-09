@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awsome Art</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="art.css">
+</head>
+<body>
+<audio id="background-audio" autoplay loop muted>
+		<source src="carefree.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+</audio>
+<button id="unmuteButton" onclick="toggleMute()">Play Music</button>
+
+    <!-- Using the fixed nav container -->
+    <div class="navbar-container">
+        <header>
+            <h1>Art Portfolio</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="art.html">Art</a></li>
+					<li><a href="commission.html">Commissions</a></li>
+					<li><a href="writinghome.html">Writing</a></li>
+				</ul>
+			</nav>
+		</header>
+    </div>
+
+    <main>
+        <section>
+               <h2>My Recent Drawings!!</h2>
+            <div class="image-grid">
+				<img src="angel.jpg" alt="My oc Angelo" onclick="openModal ('angel.jpg', 'My oc Angelo')">
+				<img src="1pony.jpg" alt="My friend as a MLP character" onclick="openModal ('1pony.jpg', 'My friend as a MLP character')">
+				<img src="2pony.jpg" alt="Me and my friend as MLP characters" onclick="openModal ('2pony.jpg', 'Me and my friend as MLP characters')">
+				<img src="squidgame.jpg" alt="Me in squid game" onclick="openModal ('squidgame.jpg', 'Me in squid game')">
+				<img src="sillyme.jpg" alt="Drawing of big me and chibi me" onclick="openModal ('sillyme.jpg', 'Drawing of big me and chibi me')">
+				<img src="naruto.jpg" alt="Sasori and Deidara from Naruto" onclick="openModal ('naruto.jpg', 'Sasori and Deidara from Naruto')">
+				<img src="menormal.jpg" alt="Drawing of myself" onclick="openModal ('menormal.jpg', 'Drawing of myself')">
+                <img src="image0.jpeg" alt="Dante from Devil May Cry on a huge strawberry parfait" onclick="openModal('image0.jpeg', 'Dante from Devil May Cry on a huge strawberry parfait')">
+                <img src="image7.jpeg" alt="Hangyodon and Hatchiware Eating cotton candy" onclick="openModal('image7.jpeg', 'Hangyodon and Hatchiware Eating cotton candy')">
+                <img src="image2.jpeg" alt="My friends roblox character" onclick="openModal('image2.jpeg', 'My friends roblox character')">
+                <img src="image9.jpeg" alt="My original Gyaruo character" onclick="openModal('image9.jpeg', 'My original Gyaruo character')">
+                <img src="longimg.jpeg" alt="An oc drawing" onclick="openModal('longimg.jpeg', 'An oc drawing')">
+                <img src="roblox.jpeg" alt="Drawing of someones roblox character" onclick="openModal('roblox.jpeg', 'Drawing of someones roblox character')">
+                <img src="image6.png" alt="Drawing of myself" onclick="openModal('image6.png', 'Drawing of myself')">
+            </div>
+            <p>This is some of my most recent art!
+			It takes me a while to draw so many finished looking pieces.
+			I do like to buid my portfolio so I try to make them neat.</p>
+        </section>
+        
+        <section>
+            <h2>Older Work</h2>
+            <div class="image-grid">
+                <img src="roblox2.jpeg" alt="Roblox Character drawing" onclick="openModal('roblox2.jpeg', 'Roblox Character drawing')">
+                <img src="miku.jpeg" alt="Drawing of Miku and Hatchiware" onclick="openModal('miku.jpeg', 'Drawing of Miku and Hatchiware')">
+                <img src="zoro.jpeg" alt="Drawing of Zoro" onclick="openModal('zoro.jpeg', 'Drawing of Zoro')">
+                <img src="pinkguy.jpeg" alt="Drawing of an oc" onclick="openModal('pinkguy.jpeg', 'Drawing of an oc')">
+            </div>
+            <p>Here are some of my older drawings!...</p>
+        </section>
+        
+        <section>
+            <h2>Art Process</h2>
+            <div class="image-grid">
+                <img src="process1.jpeg" alt="Sketch of Drawing" onclick="openModal('process1.jpeg', 'Sketch of Drawing')"> 
+                <img src="process2.jpeg" alt="Lineart of drawing" onclick="openModal('process2.jpeg', 'Lineart of drawing')"> 
+                <img src="process3.png" alt="Start of Flat Color for drawing" onclick="openModal('process3.png', 'Start of Rendering and Flat Color for Drawing')"> 
+                <img src="process4.png" alt="Whole Flat Color for Drawing" onclick="openModal('process4.png', 'Whole Rendering for Drawing')"> 
+            </div>
+            <p>This is the process my art usually follows!...</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Art Gallery</p>
+    </footer>
+
+    <!-- The Modal (Hidden by default) -->
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="img01" alt="Full size image view">
+      <div id="caption"></div>
+    </div>
+
+    <!-- JavaScript for the Lightbox/Modal -->
+    <script>
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        function openModal(imgSrc, imgAlt) {
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+            captionText.innerHTML = imgAlt;
+            document.body.style.overflow = "hidden"; 
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            closeModal();
+          }
+        }
+    </script>
+
+</body>
+<script>
+    var audio = document.getElementById('background-audio');
+    var unmuteButton = document.getElementById('unmuteButton');
+
+    function toggleMute() {
+        if (audio.muted) {
+            audio.muted = false;
+            unmuteButton.textContent = 'Pause Music';
+        } else {
+            audio.muted = true;
+            unmuteButton.textContent = 'Play Music';
+        }
+    }
+</script>
+</html>

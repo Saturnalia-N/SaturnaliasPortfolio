@@ -1,0 +1,81 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="writing.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+<audio id="background-audio" autoplay loop muted>
+		<source src="carefree.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+</audio>
+<button id="unmuteButton" onclick="toggleMute()">Play Music</button>
+
+ <div class="navbar-container">
+	<header>
+		<h1>Short Story</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="art.html">Art</a></li>
+					<li><a href="commission.html">Commissions</a></li>
+					<li><a href="writinghome.html">Writing</a></li>
+					<li class="active"><a href="story2.html">RIWEM</a></li>
+				</ul>
+			</nav>
+	</header>
+</div>
+
+<main>
+	<section class="writing-piece">
+	<h2></h2>
+        <h3>
+		This is a short story I wrote a year ago.
+		its about a young boy who fights his evil alien twin.
+		Its based on a theme of the worst day hes ever had.
+		</h3>
+	</div>
+    </section>
+
+    <section class="writing-piece">
+		<h3>Really? It wasn't even me!</h3>
+		<p>
+			Today sucked, like really sucked, it was absolutely the worst day ever. It all started three weeks ago, I was minding my business when all of a sudden boom! a UFO landed right in front of me! I didn't believe my eyes at first but I couldn't just stand around so I ran up and tried to sneak in but sadly I got caught. I thought my life was over on the spot. The aliens were as strange looking as an undressed person at a costume party, they were definitely out of place. After a bit of being captured they suddenly started speaking English to me. Although they had no idea what I was capable of, I quickly escaped the aliens' poor attempt at restraining me, I ran and hid. Once I got far into their ship I saw more and more of these cool gadgets. They stared at me with their big eyes like they wanted me to take them.
+
+			Though it was short lived, they ended up catching me again, this time they recruited me to join them. They needed space fighters, although I'm only in middle school, I guess they just saw my talents. Naturally I accepted right away, who wouldn't want to go on a space adventure!? I explained to them about school. I couldn't just leave without ditching school and what would I tell my mom? The aliens were skilled though they made a replacement that looked and acted  almost exactly like me. I could hardly tell the difference.
+
+			 I thought what's the worst that could happen? I set out on my adventure and I got to see many different areas of the galaxy. I visited almost 30 different planets and made a bunch of friends. I went to defeat one of the universe's most delicious delicacies. They say it tastes like chicken and In the middle of my journey right when I was battling galactic mutated hot dogs, naturally dogs that were on fire, I got the worst feeling. Almost like something inside me changed. I had to get back home soon. I told my group how I could hear screams in my ear and sounds that would bounce around my head. 
+
+			Their faces dropped, what I explained is side effects when a clone goes corrupt. I didn't think it would be that bad but we rushed back to earth. I had only been gone 3 weeks so my trip was cut short. It was 10:30 on wednesday, I rushed over to the school and I could smell a rancid odor from the front of the campus. I found my fake clone had taken over the school, ordering teachers around like slaves and making threats. He looked nothing like he did in the beginning. He was fully mutated into an alien now with green slimy skin and bulging black eyes. So I sprung into action. I jumped in using all my cool weapons that I found on different planets.
+
+			He attacked back at me with a goopy fist, I could feel the slimy texture of his skin graze me and I 
+			did the most insane backflip ever to dodge it. I shot him right in his face and he exploded into green soup. I saved everybody in the school although my alien friends told me we would have to wipe all their memories of it because it was too risky. At least I remember all about it, but then I got called to the principal's office and since my clone harassed everyone and they don't remember it being the alien I got suspended!? I told my alien friends what happened and they told me it might be better when I end this year. They said they'll come back for me when summer starts but it's 5 months away! So now I'm suspended from school for a whole week, my mom grounded me for the rest of the school year, and when I told her what happened and that it really wasn't me she told me to stop making up stuff. So now I'm stuck in my room and I have to wait so long. This is the worst day ever.
+		</p>
+	</div>
+    </section>
+</main>
+	
+<footer>
+	<p>&copy; 2025 Saturnalia Nelson. All rights reserved.</p>
+</footer>
+
+</body>
+<script>
+    var audio = document.getElementById('background-audio');
+    var unmuteButton = document.getElementById('unmuteButton');
+
+    function toggleMute() {
+        if (audio.muted) {
+            audio.muted = false;
+            unmuteButton.textContent = 'Pause Music';
+        } else {
+            audio.muted = true;
+            unmuteButton.textContent = 'Play Music';
+        }
+    }
+</script>
+</html>
